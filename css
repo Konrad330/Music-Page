@@ -1,1 +1,186 @@
-a
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  padding: 1rem;
+}
+
+.player {
+  background: #1e1e1e;
+  border-radius: 20px;
+  padding: 30px 25px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 15px 25px rgba(0,0,0,0.8), inset 0 1px 2px rgba(255,215,0,0.2);
+  border: 1px solid #b8860b;
+  text-align: center;
+}
+
+.header {
+  color: #b8860b;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.record-container {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 25px;
+}
+
+.record {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #3a3a3a, #0a0a0a);
+  box-shadow: 0 0 20px rgba(255,215,0,0.3), inset 0 0 20px #000;
+  position: relative;
+  border: 2px solid #b8860b;
+}
+
+.record.playing {
+  animation: spin 4s linear infinite;
+}
+
+.record-label {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background: radial-gradient(circle, #f1c40f, #b8860b);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 15px gold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.5rem;
+  color: #1e1e1e;
+  border: 2px solid #d4af37;
+}
+
+@keyframes spin {
+  from { transform: rotate(0); }
+  to { transform: rotate(360deg); }
+}
+
+.song-info {
+  margin-bottom: 20px;
+}
+
+.song-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 0 5px #ffaa00;
+  margin-bottom: 5px;
+}
+
+.song-artist {
+  font-size: 1.3rem;
+  color: #ccc;
+}
+
+.time-display {
+  font-family: 'Courier New', monospace;
+  font-size: 2rem;
+  color: #0ff;
+  text-shadow: 0 0 5px cyan;
+  margin-bottom: 25px;
+  letter-spacing: 4px;
+}
+
+.time-sep {
+  letter-spacing: 8px; /* creates the wide gap between times */
+}
+
+.volume-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  color: #b8860b;
+}
+
+.volume-control label {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+input[type=range] {
+  width: 180px;
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  height: 5px;
+  background: #333;
+  border-radius: 5px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background: gold;
+  margin-top: -6px;
+  cursor: pointer;
+  border: 1px solid #b8860b;
+}
+
+input[type=range]::-moz-range-track {
+  height: 5px;
+  background: #333;
+  border-radius: 5px;
+}
+
+input[type=range]::-moz-range-thumb {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background: gold;
+  cursor: pointer;
+  border: 1px solid #b8860b;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.controls button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: color 0.2s, transform 0.1s;
+  filter: drop-shadow(0 0 5px gold);
+}
+
+.controls button:hover {
+  color: gold;
+  transform: scale(1.1);
+}
+
+.controls button:active {
+  transform: scale(0.95);
+}
