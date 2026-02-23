@@ -1,12 +1,12 @@
 // Playlist with your five MP3 files
 const playlist = [
   {
-    title: "Song 1",
+    title: "Trąbka czasu",
     artist: "Unknown Artist",
     src: "Song 1.mp3"
   },
   {
-    title: "Song 2",
+    title: "Trąbka rewolucji",
     artist: "Unknown Artist",
     src: "Song 2.mp3"
   },
