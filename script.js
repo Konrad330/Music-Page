@@ -2,27 +2,27 @@
 const playlist = [
   {
     title: "Trąbka czasu",
-    artist: "Unknown Artist",
+    artist: "Chronos Parade",
     src: "Song 1.mp3"
   },
   {
     title: "Trąbka rewolucji",
-    artist: "Unknown Artist",
+    artist: "Aurelius Vox & The Crimson Philharmonic",
     src: "Song 2.mp3"
   },
   {
-    title: "Song 3",
-    artist: "Unknown Artist",
+    title: "Neonowa Trąbka",
+    artist: "Midnight Brass Drive",
     src: "Song 3.mp3"
   },
   {
-    title: "Song 4",
-    artist: "Unknown Artist",
+    title: "Stalowa Trąbka",
+    artist: "Iron Herald",
     src: "Song 4.mp3"
   },
   {
-    title: "Song 5",
-    artist: "Unknown Artist",
+    title: "Neon Brass Trumpet",
+    artist: "Chrome Echo",
     src: "Song 5.mp3"
   }
 ];
